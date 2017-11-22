@@ -1,12 +1,12 @@
-package sust.util;
+package src.sust.util;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import bean.StuInf;
 import net.sf.json.JSONObject;
+import src.bean.StuInf;
 
 public class JsonUtil {
 	
@@ -52,8 +52,8 @@ public class JsonUtil {
 	
 	public StuInf toStuInf(String me,String real_me,String verify_me){
 		StuInf si =new StuInf();
-		System.out.println("Util:\n***1.me£º" + me + "\n" + "***2.real_me£º"
-				+ real_me + "\n" + "***3.verify_me£º" + verify_me);
+		System.out.println("Util:\n***1.meï¿½ï¿½" + me + "\n" + "***2.real_meï¿½ï¿½"
+				+ real_me + "\n" + "***3.verify_meï¿½ï¿½" + verify_me);
 		
 		try {
 			if (!verify_me.equals(" ") || verify_me != null || getInf(verify_me, "status").equals("success")) {
@@ -87,7 +87,7 @@ public class JsonUtil {
 				System.out.println(me);
 			} 
 		} catch (Exception e) {
-			System.out.println("StuInf³õÊ¼»¯´íÎó");
+			System.out.println("StuInfï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		System.out.println(si.toString());
 		return si;
