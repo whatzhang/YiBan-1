@@ -37,7 +37,7 @@
 			String url = au.forwardurl(callbackurl, "test", Authorize.DISPLAY_TAG_T.WEB);
 			response.sendRedirect(url);
 		} else {
-			session.setAttribute("text", au.querytoken(code, callbackurl));	
+			session.setAttribute("text", au.querytoken(code, callbackurl));
 		}
 	%>
 

@@ -33,26 +33,11 @@
 <link href="${pageContext.request.contextPath}/css/jquery-ui.min.css"
 	rel="stylesheet" type="text/css">
 
-<!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
-                 height="42" width="820"
-                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a>
-    </div>
-    <![endif]-->
-<!--[if lt IE 9]>
-    <script src="js/html5.js"></script>
-    <script src="js/css3-mediaqueries.js"></script>
-    <![endif]-->
-
-
 </head>
 <body>
-	<% 
-        StuInf stf = (StuInf)session.getAttribute("userInf");
-    %>
+	<%
+		StuInf stf = (StuInf) session.getAttribute("userInf");
+	%>
 	<div class="wrap-body">
 		<a name="head"></a>
 		<!--------------Header--------------->
@@ -96,22 +81,20 @@
 						<div id="contact_form">
 							<form name="form1" id="ff" method="POST"
 								onsubmit="return isIdCardNo()"
-								action="HandServlet?method=contact5">
+								action="./html/HandServlet?method=contact5">
 
 								<h3>第一部分：</h3>
 								<p>校园奖学金申请表申请学生本人基本情况：</p>
-								 <label> <span>姓名:</span> <input type="text"
+								<label> <span>姓名:</span> <input type="text"
 									placeholder="请输入您的姓名" name="name" value="" required>
 								</label> <label> <span>性别：</span> <input type="radio" name="sex"
 									value="男" checked>男 <input type="radio" name="sex"
 									value="女">女
 								</label> <label> <span>出生日期</span> <input type="text"
 									name="date" readonly="readonly" class="text" id="date" />
-								</label>
-								 <label> <span>生源:</span> <input type="text"
+								</label> <label> <span>生源:</span> <input type="text"
 									placeholder="" name="from" value="" required>
-								</label> 
-								 <label> <span>民族:</span> <select name="Snation">
+								</label> <label> <span>民族:</span> <select name="Snation">
 										<option value="汉族">汉族</option>
 										<option value="藏族">藏族</option>
 										<option value="维吾尔族">维吾尔族</option>
@@ -172,8 +155,7 @@
 										<option value="党员">党员</option>
 										<option value="群众">群众</option>
 								</select>
-								</label>
-								 <label> <span>学院:</span> <select name="Sacademy">
+								</label> <label> <span>学院:</span> <select name="Sacademy">
 										<option value="化工科学与工程学院">化工科学与工程学院</option>
 										<option value="材料科学与工程学院">材料科学与工程学院</option>
 										<option value="环境科学与工程学院">环境科学与工程学院</option>
@@ -186,49 +168,35 @@
 										<option value="文理学院">文理学院</option>
 										<option value="职业技术学院">职业技术学院</option>
 								</select>
-								</label> 
-								<label>
-								<span>专业:</span> <input type="text"
-									id="major" placeholder="如（计算机科学与技术）" name="major"
-									value="" required />
-								</label>
-								
-								<label><span>班级:</span> <input type="text"
-									id="class" placeholder="如（计本141）" name="class"
-									value="" required />
-								</label>
-								 <label> <span>入校时间:</span> <input type="text"
-									name="Cdate" readonly="readonly" class="text" id="Cdate" />
-								</label> 
-								<label><span>学制：</span> <select name=" EduSys">
+								</label> <label> <span>专业:</span> <input type="text" id="major"
+									placeholder="如（计算机科学与技术）" name="major" value="" required />
+								</label> <label><span>班级:</span> <input type="text" id="class"
+									placeholder="如（计本141）" name="class" value="" required /> </label> <label>
+									<span>入校时间:</span> <input type="text" name="Cdate"
+									readonly="readonly" class="text" id="Cdate" />
+								</label> <label><span>学制：</span> <select name=" EduSys">
 										<option value="2年制">2年制</option>
 										<option value="3年制">3年制</option>
 										<option value="4年制">4年制</option>
 										<option value="5年制">5年制</option>
-									</select> 
-								</label>
-								
-								
-								<label> <span>学号：</span> <input type="text"
+								</select> </label> <label> <span>学号：</span> <input type="text"
 									id="SNumber" placeholder="如（201401010101）" name="SNumber"
 									value="" required />
-								</label>
-								<label> <span>奖学金名称：</span> <input type="text"
-									id="PriName" placeholder="" name="PriName"
-									value="" required />
-										<span>等级：</span> <select name="Rank">
+								</label> <label> <span>奖学金名称：</span> <input type="text"
+									id="PriName" placeholder="" name="PriName" value="" required />
+									<span>等级：</span> <select name="Rank">
 										<option value="一等奖">一等奖</option>
 										<option value="二等奖">二等奖</option>
 										<option value="三等奖">三等奖</option>
-									</select> 
+								</select>
 								</label>
 
 								<h3>第二部分：</h3>
 								<p>学年第一学期成绩：</p>
-								<div id="part3">           
-									<label> <span>课     程:</span> <input type="text"
+								<div id="part3">
+									<label> <span>课 程:</span> <input type="text"
 										placeholder="" id="CrsName" name="CrsName" value="" required />
-									</label> <label> <span>成  绩：</span> <input type="text"
+									</label> <label> <span>成 绩：</span> <input type="text"
 										placeholder="" id="Score" name="Score" value="" required />
 									</label>
 								</div>
@@ -272,27 +240,40 @@
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
 								<h6>
-									<a href="#">国家奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/JXJ_collect1.html">国家奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img03.jpg" /></a>
 								<h6>
-									<a href="#">励志奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/LZJXJ_collect2.html">励志奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img04.jpg" /></a>
 								<h6>
-									<a href="#">校园奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/XJXJ_collect3.html">校园奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
+							</div>
+							<div class="post">
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
+								<h6>
+									<a
+										href="${pageContext.request.contextPath}/html/ZXJ_collect4.jsp">其他申请表格</a>
+								</h6>
+								<p>2017年09月21日</p>
 							</div>
 						</div>
+					</div>
 					</div>
 					<div class="widget wid-label">
 						<div class="wid-header">

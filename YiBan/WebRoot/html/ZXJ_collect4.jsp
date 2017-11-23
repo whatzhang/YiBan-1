@@ -135,12 +135,8 @@ p {
 					</article>
 				</div>
 				<hr>
-				<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<p style="text-align: center;">注：请点击上面链接分别下载各申请表</p>
+				<br> <br> <br> <br> <br>
+				<p style="text-align: center;">注：请点击上面链接分别下载各申请表</p>
 			</div>
 
 			<div class="col-1-3">

@@ -33,26 +33,11 @@
 <link href="${pageContext.request.contextPath}/css/jquery-ui.min.css"
 	rel="stylesheet" type="text/css">
 
-<!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
-                 height="42" width="820"
-                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a>
-    </div>
-    <![endif]-->
-<!--[if lt IE 9]>
-    <script src="js/html5.js"></script>
-    <script src="js/css3-mediaqueries.js"></script>
-    <![endif]-->
-
-
 </head>
 <body>
-	<% 
-        StuInf stf = (StuInf)session.getAttribute("userInf");
-    %>
+	<%
+		StuInf stf = (StuInf) session.getAttribute("userInf");
+	%>
 	<div class="wrap-body">
 		<a name="head"></a>
 		<!--------------Header--------------->
@@ -96,16 +81,26 @@
 						<div id="contact_form">
 							<form name="form1" id="ff" method="POST"
 								onsubmit="return isIdCardNo()"
-								action="HandServlet?method=contact5">
+								action="./html/HandServlet?method=contact5">
 
 								<h3>第一部分：</h3>
 								<p>国家励志奖学金申请表申请学生本人基本情况：</p>
 								<label> <span>学校:</span> <input type="text"
 									placeholder="请选择所在学校" name="school" id="school" value="陕西科技大学"
 									required>
-								</label> <label> <span>院系:</span> <input type="text"
-									placeholder="如（电气与信息工程学院计算机系）" name="Department" value=""
-									required>
+									
+								</label> <label> <span>院系:</span> <select name="academy">
+										<option value="电气与信息工程学院">电气与信息工程学院</option>
+										<option value="化工科学与工程学院">化工科学与工程学院</option>
+										<option value="材料科学与工程学院">材料科学与工程学院</option>
+										<option value="环境科学与工程学院">环境科学与工程学院</option>
+										<option value="食品与生物工程学院">食品与生物工程学院</option>
+										<option value="机电工程学院">机电工程学院</option>
+										<option value="经济与管理学院">经济与管理学院</option>
+										<option value="化学与化工学院">化学与化工学院</option>
+										<option value="设计与艺术学院">设计与艺术学院</option>
+										<option value="文理学院">文理学院</option>
+										<option value="职业技术学院">职业技术学院</option>
 								</label> <label> <span>姓名:</span> <input type="text"
 									placeholder="请输入您的姓名" name="name" value="" required>
 								</label> <label> <span>性别：</span> <input type="radio" name="sex"
@@ -265,27 +260,40 @@
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
 								<h6>
-									<a href="#">国家奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/JXJ_collect1.html">国家奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img03.jpg" /></a>
 								<h6>
-									<a href="#">励志奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/LZJXJ_collect2.html">励志奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img04.jpg" /></a>
 								<h6>
-									<a href="#">校园奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/XJXJ_collect3.html">校园奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
+							</div>
+							<div class="post">
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
+								<h6>
+									<a
+										href="${pageContext.request.contextPath}/html/ZXJ_collect4.jsp">其他申请表格</a>
+								</h6>
+								<p>2017年09月21日</p>
 							</div>
 						</div>
+					</div>
 					</div>
 					<div class="widget wid-label">
 						<div class="wid-header">

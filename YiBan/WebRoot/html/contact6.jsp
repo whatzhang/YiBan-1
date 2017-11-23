@@ -34,26 +34,12 @@
 <link href="${pageContext.request.contextPath}/css/jquery-ui.min.css"
 	rel="stylesheet" type="text/css">
 
-<!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
-                 height="42" width="820"
-                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a>
-    </div>
-    <![endif]-->
-<!--[if lt IE 9]>
-    <script src="js/html5.js"></script>
-    <script src="js/css3-mediaqueries.js"></script>
-    <![endif]-->
-
 
 </head>
 <body>
-	<% 
-        StuInf stf = (StuInf)session.getAttribute("userInf");
-    %>
+	<%
+		StuInf stf = (StuInf) session.getAttribute("userInf");
+	%>
 	<div class="wrap-body">
 		<a name="head"></a>
 		<!--------------Header--------------->
@@ -97,7 +83,7 @@
 						<div id="contact_form">
 							<form name="form1" id="ff" method="POST"
 								onsubmit="return isIdCardNo()"
-								action="HandServlet?method=contact6">
+								action="./html/HandServlet?method=contact6">
 
 								<h3>第一部分：</h3>
 								<p>国家奖学金申请之学生本人基本情况：</p>
@@ -193,23 +179,22 @@
 								<h3>第二部分：</h3>
 								<p>国家奖学金申请之学生本人学习情况：</p>
 								<label> <span>成绩排名:</span> <input type="text"
-									id="ScoreT" placeholder="名次/总人数" name="ScoreT" value=""
+									id="ScoreT" placeholder="名次/总人数（如N/M）" name="ScoreT" value=""
 									required />
 								</label><label><span>必修课门数:</span><input type="number" id="CCou"
 									placeholder="" name="CCrs" value="" required /> </label><label><span>及格门数:</span><input
 									type="number" id="PCrs" placeholder="" name="PCrs" value=""
 									required /> </label><label><span>必修课排名:</span> <input
-									type="text" id="ScoC" placeholder="名次/总人数" name="ScoC" value=""
+									type="text" id="ScoC" placeholder="名次/总人数（如N/M）" name="ScoC" value=""
 									required /> </label>
 
 
 								<h3>第三部分：</h3>
 								<p>国家奖学金申请之学生本人大学期间主要获奖情况：</p>
 								<div id="part3">
-									<label> <span>获奖日期:</span>
-									 <input type="text"
-									name="Pdate" readonly="readonly" class="text" id="Pdate" />
-									
+									<label> <span>获奖日期:</span> <input type="text" placeholder="如2017.01.01"
+										name="Pdate" id="Pdate" required/>
+
 									</label> <label> <span>奖项名称:</span> <input type="text"
 										placeholder="奖项名称" id="Prize" name="Prize" value="" required />
 									</label> <label> <span>颁奖单位:</span> <input type="text"
@@ -255,27 +240,40 @@
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
 								<h6>
-									<a href="#">国家奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/JXJ_collect1.html">国家奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img03.jpg" /></a>
 								<h6>
-									<a href="#">励志奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/LZJXJ_collect2.html">励志奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
 							</div>
 							<div class="post">
 								<a href="#"><img
 									src="${pageContext.request.contextPath}/images/img04.jpg" /></a>
 								<h6>
-									<a href="#">校园奖学金申请</a>
+									<a
+										href="${pageContext.request.contextPath}/html/XJXJ_collect3.html">校园奖学金申请</a>
 								</h6>
-								<p>2016年09月21日</p>
+								<p>2017年09月21日</p>
+							</div>
+							<div class="post">
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
+								<h6>
+									<a
+										href="${pageContext.request.contextPath}/html/ZXJ_collect4.jsp">其他申请表格</a>
+								</h6>
+								<p>2017年09月21日</p>
 							</div>
 						</div>
+					</div>
 					</div>
 					<div class="widget wid-label">
 						<div class="wid-header">

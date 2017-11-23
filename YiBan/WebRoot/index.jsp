@@ -125,7 +125,7 @@
 						学习、努力进取，在德、智、体、美等方面全面发展，由中央政府出资设立的奖励特别优秀学生的奖学金。获奖
 						比例约占0.2%，获奖学生每人奖励8000元。作为大学生获得国家奖学金是一项莫大的荣誉</p>
 					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%>
-					<a href="${pageContext.request.contextPath}/html/ZXJ_collect1.html"
+					<a href="${pageContext.request.contextPath}/html/JXJ_collect1.html"
 						class="more">我要申请</a>
 				</div>
 			</div>
@@ -145,7 +145,7 @@
 						学校规章制度；3.诚实守信，道德品质优良；4.在校期间学习成绩优秀；5.家庭经济困难；6.社会能力，工作
 						能力较强，有一定的群众基础；7.无其他不良嗜好和不适合该荣誉称号的表现。</p>
 					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%>
-					<a href="${pageContext.request.contextPath}/html/ZXJ_collect2.html"
+					<a href="${pageContext.request.contextPath}/html/LZJXJ_collect2.html"
 						class="more">我要申请</a>
 				</div>
 			</div>
@@ -164,7 +164,7 @@
 					<p>申请基本条件： 1．热爱社会主义祖国，拥护中国共产党的领导和改革开放政策；2．遵守宪法、法律法规，遵守校纪校规，积极上进； 3．学习勤奋，态度端正； 
 						4．尊敬师长，团结同学，关心集体，诚实守信；5．积极参加体育锻炼，达到《大学生体质健康标准》；  6．按期缴清学杂费并注册的在册学生</p>
 					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%>
-					<a href="${pageContext.request.contextPath}/html/ZXJ_collect3.html"
+					<a href="${pageContext.request.contextPath}/html/XJXJ_collect3.html"
 						class="more">我要申请</a>
 				</div>
 			</div>
